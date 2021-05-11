@@ -6,13 +6,27 @@
 
     <link href="{{ asset('assets/frontend/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
-    <title>Hello, world!</title>
+    <title>{{ env('APP_NAME') }}</title>
+
+    <style>
+      .bg-gray {
+        background-color: #efefef;
+      } 
+      .bg-lightblue {
+        background-color: #9fd0ff;
+      }
+      .nav-item {
+        border-radius: 5px;
+        margin-top: 2px;
+        margin-right: 2px;
+      }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-lightblue py-2 px-3 border-bottom">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24">
+        <a class="navbar-brand p-1 bg-gray border " style="border-radius: 10px; box-shadow: 0px 0px 20px 2px #1f82a5b5;" href="{{ route('frontend.main') }}" >
+          <img src="{{ asset('assets/images/SUKAKODEBIG.png') }}" alt="Logo SukaKode" class="img-fluid" width="150px" height="60px;">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -20,24 +34,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" aria-current="page" href="{{ route('frontend.main') }}">Halaman Utama</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <a class="nav-link" href="#">Daftar Artikel</a>
             </li>
           </ul>
           <form class="d-flex">
@@ -48,8 +48,12 @@
       </div>
     </nav>
 
-    <div class="container-fluid">
-      <h1>Hello, world!</h1>
+    <div class="container-fluid pt-2">
+      <div class="row">
+        <div class="col-12">
+          <h5>Hello Isekai !</h5>
+        </div>
+      </div>
     </div>
 
     <script src="{{ asset('assets/frontend/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

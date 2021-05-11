@@ -20,7 +20,7 @@ $frontend = 'App\Http\Controllers\Frontend\\';
 //     return view('welcome');
 // });
 
-Route::get('/', [$frontend . MainController::class, 'index']);
+Route::get('/', [$frontend . MainController::class, 'index'])->name('frontend.main');
 
 Auth::routes();
 
