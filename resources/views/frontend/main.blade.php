@@ -23,7 +23,7 @@
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-lightblue py-2 px-3 border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light bg-lightblue py-2 px-3">
       <div class="container-fluid">
         <a class="navbar-brand p-1 bg-gray border " style="border-radius: 10px; box-shadow: 0px 0px 20px 2px #1f82a5b5;" href="{{ route('frontend.main') }}" >
           <img src="{{ asset('assets/images/SUKAKODEBIG.png') }}" alt="Logo SukaKode" class="img-fluid" width="150px" height="60px;">
@@ -47,6 +47,21 @@
         </div>
       </div>
     </nav>
+
+    <div class="container-fluid p-0">
+      <div class="h-100 p-5 text-white bg-dark" style="background-image: url('{{ asset('assets/images/banner.png') }}');">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 style="text-shadow: 9px 9px 10px #5b00ff;">SukaKode - Blog & Artikel</h2>
+            {{-- <h4><marquee behavior="" direction="">Selamat Datang di <a href="#" style="text-decoration: none; color: #fafafa;">SukaKode</a></marquee></h4> --}}
+            <h4 style="text-shadow: 9px 9px 10px #52ff00;">Selamat Datang di <a href="#" style="text-decoration: none; color: #fafafa;">SukaKode</a></h4>
+            <h6 style="text-shadow: 9px 9px 10px #ffcc00;" class="mb-3">Hayu Belajar Bersama</h6>
+            <button class="btn btn-outline-light" type="button">Hayukk !</button>
+          </div>
+        </div>
+      </div>
+      {{-- <img src="{{ asset('assets/images/banner.png') }}" alt="Banner SK-Blog" class="img-fluid"> --}}
+    </div>
 
     <div class="container-fluid pt-2">
       <div class="row">
