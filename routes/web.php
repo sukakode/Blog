@@ -1,6 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
+$frontend = 'App\Http\Controllers\Frontend\\';
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [$frontend . MainController::class, 'index']);
 
 Auth::routes();
 
